@@ -8,9 +8,6 @@ module.exports = {
 		path: path.resolve('.', 'dist'),
 		filename: 'js/[name].js',
 		publicPath: '/',
-		chunkFilename: 'js/[name].js',
-		globalObject: "(typeof self !== 'undefined' ? self : this)",
-		sourcePrefix: '',
 	},
 	devServer: {static: 'dist', historyApiFallback: {index: 'index.html'}},
 	resolve: {
@@ -30,15 +27,15 @@ module.exports = {
 						options: {
 							presets: ['babel-preset-solid', '@babel/preset-typescript'],
 							// plugins: ['solid-styled-jsx/babel'],
-							// plugins: ['babel-plugin-solid-styled'],
+							plugins: ['babel-plugin-solid-styled'],
 						},
 					},
 				],
 			},
-			// {
-			// 	test: /solid-styled\/dist\/esm\/production\/index.jsx$/,
-			// 	use: [{loader: 'babel-loader', options: {presets: ['babel-preset-solid']}}],
-			// },
+			{
+				test: /solid-styled\/dist\/esm\/(development)|(production)\/index.jsx$/,
+				use: [{loader: 'babel-loader', options: {presets: ['babel-preset-solid']}}],
+			},
 		],
 	},
 

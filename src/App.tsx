@@ -1,6 +1,6 @@
 import {NavLink, Router} from 'solid-app-router'
 import {Routes} from './Routes'
-// import {StyleRegistry} from 'solid-styled'
+import {StyleRegistry} from 'solid-styled'
 
 // import {Suspense} from 'solid-js'
 
@@ -10,22 +10,22 @@ import {Routes} from './Routes'
 export function App() {
 	return (
 		<>
-			{/* <StyleRegistry> */}
-			{/* TODO Suspense broke and doesn't show loaded state, although we're fine without it. */}
-			{/* <Suspense fallback={<h1>Loading...</h1>}> */}
-			<Router>
-				<div id="nav">
-					<NavLink href="/home">Home</NavLink> | <NavLink href="/command">Command</NavLink> |{' '}
-					<NavLink href="/configTable">Config Tables</NavLink>
-					{/*| <NavLink href="/mapdemo">Map Demo</NavLink> */}
-				</div>
+			<StyleRegistry>
+				{/* TODO Suspense broke and doesn't show loaded state, although we're fine without it. */}
+				{/* <Suspense fallback={<h1>Loading...</h1>}> */}
+				<Router>
+					<div id="nav">
+						<NavLink href="/home">Home</NavLink> | <NavLink href="/command">Command</NavLink> |{' '}
+						<NavLink href="/configTable">Config Tables</NavLink>
+						{/*| <NavLink href="/mapdemo">Map Demo</NavLink> */}
+					</div>
 
-				<div id="routes">
-					<Routes />
-				</div>
+					<div id="routes">
+						<Routes />
+					</div>
 
-				<style global>{
-					/*css*/ `
+					<style global>{
+						/*css*/ `
 							html,
 							body,
 							#app {
@@ -74,10 +74,10 @@ export function App() {
 								background-color: lightslategrey;
 							}
 						`
-				}</style>
-			</Router>
-			{/* </Suspense> */}
-			{/* </StyleRegistry> */}
+					}</style>
+				</Router>
+				{/* </Suspense> */}
+			</StyleRegistry>
 		</>
 	)
 }
