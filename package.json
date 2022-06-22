@@ -5,8 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"serve": "webpack serve",
-		"build": "webpack",
-		"prepare": "cd .. && npm install # in case the top level repo npm install was skipped"
+		"build": "webpack"
 	},
 	"dependencies": {
 		"@solid-primitives/memo": "^0.3.0",
