@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+:root {
+	font-size: 62.5%;
+}
+
+.matrixplot .modebar-btn {
+	right: 0;
+	display: block;
+	margin-top: 8vh;
+}
+
+.matrixplot .modebar {
+	right: -10vw;
+	position: absolute;
+	top: 24vh;
+	line-height: 10;
+}

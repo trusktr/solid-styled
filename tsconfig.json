@@ -1,0 +1,33 @@
+// This doesn't change anything about our build yet, but editors like VS Code
+// will perform type checking on files using this config, in order to show red
+// squiggly lines for errors while text editing.
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+
+		"emitDeclarationOnly": true,
+		"declaration": true,
+		"target": "esnext",
+		"newLine": "LF",
+		"moduleResolution": "node",
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+
+		"strict": true,
+		"importsNotUsedAsValues": "error",
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"exactOptionalPropertyTypes": true,
+		"useUnknownInCatchVariables": true,
+		"isolatedModules": true,
+		"useDefineForClassFields": true,
+
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": ["./src/"]
+}
